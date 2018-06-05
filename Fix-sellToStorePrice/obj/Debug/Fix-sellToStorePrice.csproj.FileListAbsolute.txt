@@ -1,0 +1,6 @@
+E:\External Files\Documents\Visual Studio 2015\Projects\Stardew-Valley-Multiplayer-Sell-Price-Fix-master\Stardew-Valley-Multiplayer-Sell-Price-Fix-master\Fix-sellToStorePrice\obj\Debug\Fix-sellToStorePrice.csprojResolveAssemblyReference.cache
+E:\External Files\Documents\Visual Studio 2015\Projects\SDV-Multiplayer-Sell-Price-Fix\Fix-sellToStorePrice\bin\Debug\Fix-sellToStorePrice.dll
+E:\External Files\Documents\Visual Studio 2015\Projects\SDV-Multiplayer-Sell-Price-Fix\Fix-sellToStorePrice\bin\Debug\Fix-sellToStorePrice.pdb
+E:\External Files\Documents\Visual Studio 2015\Projects\SDV-Multiplayer-Sell-Price-Fix\Fix-sellToStorePrice\bin\Debug\0Harmony.dll
+E:\External Files\Documents\Visual Studio 2015\Projects\SDV-Multiplayer-Sell-Price-Fix\Fix-sellToStorePrice\obj\Debug\Fix-sellToStorePrice.dll
+E:\External Files\Documents\Visual Studio 2015\Projects\SDV-Multiplayer-Sell-Price-Fix\Fix-sellToStorePrice\obj\Debug\Fix-sellToStorePrice.pdb
