@@ -16,31 +16,41 @@ namespace improvedSellingInMultiplayer
     {
         public override void Entry(IModHelper helper)
         {
+            // Set up Harmony to enable patching the base game directly
             var harmony = HarmonyInstance.Create("ca.drau.stardewvalley");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
+        // Let Harmony know we wish to patch the sellToStorePrice() function contained in the Object class
         [HarmonyPatch(typeof(StardewValley.Object))]
         [HarmonyPatch("sellToStorePrice")]
         public class Patch
         {
+            // prefix a return false to the existing code so as to skip executing it
             static bool Prefix()
             {
                 return false;
             }
 
+            // Execute this code after the skip so we can handle selling our own way
             static void Postfix(StardewValley.Object __instance, ref int __result)
             {
+                // Working copy of professions to use in calculation
                 HashSet<int> professions = new HashSet<int>();
 
+                // Grab all the professions held by this player
                 professions.UnionWith(Game1.player.professions);
 
+                // Now union with the professions of all other farmers
+                // This will make sure there is no double counting of professions, it just looks like the current player has all professions from everyone
+                // Players can't have the same profession more than once anyway
                 foreach (Farmer farmer in Game1.otherFarmers.Values)
                 {
                     professions.UnionWith(farmer.professions);
                 }
 
-                // Begin copy-pasta
+                // Begin copy-pasta from original sellToStorePrice() function (pre-SDV 1.3.17)
+                // Basically checks the item to see if it fits into any categories affected by profession multipliers, and applies them if the players have the profession
 
                 if (__instance is Fence)
                 {
@@ -82,7 +92,7 @@ namespace improvedSellingInMultiplayer
                     num /= 2f;
                 if ((double)num > 0.0)
                     num = Math.Max(1f, num * Game1.MasterPlayer.difficultyModifier);
-                __result = (int)num;
+                __result = (int)num; // __result was passed by reference originally, which is part of why this patch is possible in a postfix
             }
         }
     }
