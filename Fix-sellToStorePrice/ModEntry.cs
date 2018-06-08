@@ -10,7 +10,7 @@ using Harmony;
 using System.Collections.Generic;
 using Netcode;
 
-namespace Fix_sellToStorePrice
+namespace improvedSellingInMultiplayer
 {
     public class ModEntry : Mod
     {

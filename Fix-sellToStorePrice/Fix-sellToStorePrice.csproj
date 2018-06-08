@@ -7,8 +7,8 @@
     <ProjectGuid>{E410EFA1-3C40-4EF3-9E87-6A32F6A05735}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fix_sellToStorePrice</RootNamespace>
-    <AssemblyName>Fix-sellToStorePrice</AssemblyName>
+    <RootNamespace>improvedSellingInMultiplayer</RootNamespace>
+    <AssemblyName>improvedSellingInMultiplayer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
